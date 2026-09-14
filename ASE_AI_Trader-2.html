@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ASE AI Trader</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#0b1220;color:#eef3f8}
+header{padding:18px 20px;background:#111b2e;border-bottom:1px solid #26344d;display:flex;justify-content:space-between;align-items:center}
+h1{margin:0;font-size:22px}.muted{color:#9aa9bd;font-size:13px}
+.container{padding:18px;max-width:1100px;margin:auto}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{background:#121e32;border:1px solid #26344d;border-radius:14px;padding:15px}
+.big{font-size:25px;font-weight:700;margin-top:6px}
+.grid{margin-top:18px;background:#121e32;border:1px solid #26344d;border-radius:14px;overflow:hidden}
+table{width:100%;border-collapse:collapse}th,td{padding:13px 10px;text-align:right;border-bottom:1px solid #243249}th{color:#9aa9bd;font-size:12px}
+.buy{color:#46d58a;font-weight:700}.wait{color:#ffd166;font-weight:700}.sell{color:#ff6b6b;font-weight:700}
+button{background:#1d6fe8;color:white;border:0;border-radius:9px;padding:9px 13px;cursor:pointer}
+.alert{margin-top:18px;background:#16243a;border:1px solid #31527e;border-radius:14px;padding:15px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}
+@media(max-width:700px){.cards{grid-template-columns:repeat(2,1fr)} th:nth-child(4),td:nth-child(4){display:none}}
+</style>
+</head>
+<body>
+<header><div><h1>🤖 ASE AI Trader</h1><div class="muted">مساعد ذكي لمراقبة أسهم بورصة عمّان</div></div><div class="muted" id="clock"></div></header>
+<div class="container">
+<div class="cards">
+<div class="card"><div class="muted">حالة السوق</div><div class="big buy">إيجابي</div></div>
+<div class="card"><div class="muted">قوة الإشارة</div><div class="big">84/100</div></div>
+<div class="card"><div class="muted">أفضل فرصة</div><div class="big">UCIC</div></div>
+<div class="card"><div class="muted">التنبيهات</div><div class="big">3</div></div>
+</div>
+
+<div class="controls">
+<button onclick="refresh()">🔄 تحديث التحليل</button>
+<button onclick="scan()">🧠 فحص جميع الأسهم</button>
+</div>
+
+<div class="grid">
+<table><thead><tr><th>السهم</th><th>السعر</th><th>الإشارة</th><th>قوة AI</th><th>الدخول</th><th>الهدف</th><th>وقف الخسارة</th></tr></thead>
+<tbody id="rows"></tbody></table>
+</div>
+
+<div class="alert" id="alert">
+<b>🚨 تنبيه AI</b><br>
+UCIC: مراقبة اختراق المقاومة. لا شراء إذا حدث ارتفاع حاد عند الافتتاح؛ انتظر تأكيد الحجم والطلب.
+</div>
+
+<div class="grid" style="padding:16px">
+<h3>كيف يعمل المحرك؟</h3>
+<div class="muted">يحسب درجة مركبة من الاتجاه، الزخم، حجم التداول، الدعم والمقاومة، السيولة، ونتائج الشركة. هذه النسخة التجريبية تستخدم بيانات نموذجية؛ الربط الحقيقي مع بيانات ASE اللحظية يحتاج مصدر بيانات/واجهة API مرخّصة.</div>
+</div>
+</div>
+<script>
+const data=[
+["UCIC","2.06","شراء","91","2.01–2.04","2.10 / 2.15","1.98"],
+["SPIC","1.58","شراء","84","1.54–1.57","1.64 / 1.68","1.51"],
+["IDMC","1.16","انتظار","68","1.15–1.16","1.20 / 1.23","1.13"],
+["JOCM","1.06","مراقبة","61","بعد تأكيد","1.10 / 1.14","1.02"],
+["SABK","0.75","انتظار","43","—","—","—"],
+["SALM","1.38","انتظار","52","—","—","—"],
+["MHFZ","0.99","انتظار","49","—","—","—"],
+["JIIG","0.74","تجنب","35","—","—","—"],
+["JNTH","0.67","تجنب","31","—","—","—"],
+["THDI","0.71","تجنب","29","—","—","—"]
+];
+function render(){
+document.getElementById("rows").innerHTML=data.map(r=>{
+let cls=r[2]=="شراء"?"buy":(r[2]=="انتظار"||r[2]=="مراقبة"?"wait":"sell");
+return `<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td class="${cls}">${r[2]}</td><td>${r[3]}/100</td><td>${r[4]}</td><td>${r[5]}</td><td>${r[6]}</td></tr>`}).join("");
+}
+function refresh(){document.getElementById("alert").innerHTML="<b>🔄 تم تحديث الفحص</b><br>تمت إعادة ترتيب الإشارات. في النسخة الحقيقية سيتم جلب بيانات السوق ثم إعادة الحساب تلقائيًا."}
+function scan(){document.getElementById("alert").innerHTML="<b>🧠 AI Scan</b><br>أفضل سهمين حاليًا في النموذج: UCIC ثم SPIC. لا تعتبر الإشارة ضمانًا للربح."}
+setInterval(()=>document.getElementById("clock").textContent=new Date().toLocaleTimeString("ar-JO"),1000); render();
+</script>
+</body>
+</html>

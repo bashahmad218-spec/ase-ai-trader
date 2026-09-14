@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08111f"><link rel="manifest" href="manifest.json">
+<title>ASE AI Trader Pro</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#07101c;color:#edf4fb;font-family:Arial,sans-serif}
+header{background:#0d1929;border-bottom:1px solid #203149;padding:14px 18px;position:sticky;top:0;z-index:5}
+.top{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{font-size:21px;font-weight:800}.sub{color:#91a3b9;font-size:12px;margin-top:3px}
+.container{max-width:1200px;margin:auto;padding:16px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.card,.panel{background:#0d1929;border:1px solid #203149;border-radius:15px;padding:14px}.label{color:#8fa1b7;font-size:12px}.value{font-size:24px;font-weight:800;margin-top:6px}
+.green{color:#35d58a}.yellow{color:#ffd166}.red{color:#ff6978}.blue{color:#5ca9ff}
+.tabs{display:flex;gap:8px;margin:15px 0;overflow:auto}.tab{border:1px solid #29415f;background:#0d1929;color:#dfeaf5;padding:9px 13px;border-radius:10px;cursor:pointer;white-space:nowrap}.active{background:#1769d1}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.toolbar input{background:#091421;border:1px solid #29415f;color:white;padding:10px;border-radius:9px;min-width:190px}
+button{border:0;background:#1769d1;color:#fff;border-radius:9px;padding:10px 13px;cursor:pointer}.secondary{background:#17263a}
+table{width:100%;border-collapse:collapse}th,td{padding:11px 8px;border-bottom:1px solid #1d2c41;text-align:right;font-size:13px}th{color:#8fa1b7;font-size:11px}.badge{padding:5px 8px;border-radius:7px;font-weight:700}.bgreen{background:#103d2d;color:#45e49a}.byellow{background:#463814;color:#ffd166}.bred{background:#481d26;color:#ff7482}.bgray{background:#202d3e;color:#a9b8c9}
+.notice{margin-top:12px;padding:12px;border:1px solid #31557e;background:#10233a;border-radius:12px;color:#bcd0e7;line-height:1.6}
+.small{font-size:12px;color:#90a2b7}.hidden{display:none}
+@media(max-width:750px){.cards{grid-template-columns:repeat(2,1fr)}.hide-m{display:none}th,td{padding:9px 5px}}
+</style></head>
+<body>
+<header><div class="top"><div><div class="logo">🤖 ASE AI Trader Pro</div><div class="sub">محرك تحليل ومراقبة لأسهم بورصة عمّان — بدون السوق الثالث</div></div><div class="small" id="clock"></div></div></header>
+<div class="container">
+<div class="cards">
+<div class="card"><div class="label">حالة السوق</div><div class="value yellow" id="market">جاري الفحص</div></div>
+<div class="card"><div class="label">أفضل فرصة</div><div class="value blue" id="best">—</div></div>
+<div class="card"><div class="label">إشارات شراء</div><div class="value green" id="buys">0</div></div>
+<div class="card"><div class="label">تنبيهات</div><div class="value red" id="alerts">0</div></div>
+</div>
+
+<div class="tabs">
+<button class="tab active" onclick="showTab('scan',this)">🧠 AI Scan</button>
+<button class="tab" onclick="showTab('watch',this)">⭐ المراقبة</button>
+<button class="tab" onclick="showTab('alerts',this)">🔔 التنبيهات</button>
+<button class="tab" onclick="showTab('risk',this)">🛡️ إدارة المخاطر</button>
+</div>
+
+<section id="scan">
+<div class="toolbar"><input id="search" placeholder="ابحث عن رمز السهم..." oninput="render()"><button onclick="scan()">🧠 تحليل الآن</button><button class="secondary" onclick="loadDemo()">تشغيل بيانات تجريبية</button></div>
+<div class="panel"><table><thead><tr><th>السهم</th><th>السعر</th><th>الإشارة</th><th>AI</th><th>الدخول</th><th>الهدف</th><th>وقف الخسارة</th></tr></thead><tbody id="rows"></tbody></table></div>
+</section>
+
+<section id="watch" class="hidden"><div class="panel"><h3>⭐ المراقبة الذكية</h3><p class="small">أضف الأسهم التي تريد مراقبتها. النسخة الحية ستراقب السعر والحجم والطلب/العرض وتطلق الإشعار عند تحقق شروطك.</p><div class="toolbar"><input id="watchInput" placeholder="مثال: UCIC"><button onclick="addWatch()">إضافة</button></div><div id="watchList"></div></div></section>
+
+<section id="alerts" class="hidden"><div class="panel"><h3>🔔 سجل الإشارات</h3><div id="alertList" class="small">لا توجد إشارات حية بعد.</div></div></section>
+
+<section id="risk" class="hidden"><div class="panel"><h3>🛡️ إدارة المخاطر</h3><p class="small">حدد رأس المال ونسبة المخاطرة ليحسب النظام حجم الصفقة المقترح بدل الدخول بكل السيولة.</p>
+<div class="toolbar"><input id="capital" type="number" placeholder="رأس المال بالدينار"><input id="riskpct" type="number" value="1" step=".1" placeholder="المخاطرة %"><button onclick="calcRisk()">احسب</button></div><div id="riskResult" class="notice">مثال: المخاطرة 1% من 5,000 دينار = 50 دينار كحد أقصى للخسارة في الصفقة.</div></div></section>
+
+<div class="notice">
+<b>حالة البيانات:</b> هذه نسخة تطبيق تجريبية/واجهة تشغيل. لا تحتوي حاليًا على تغذية أسعار لحظية مرخّصة من ASE، لذلك <b>لا تعطي إشارات شراء/بيع حقيقية ولا ينبغي تنفيذ صفقة بناءً عليها</b>. بورصة عمّان تنشر بيانات التداول والإفصاحات، وتلزم الشركات بالإفصاحات الدورية عبر نظام XBRL. citeturn0news0turn0search3
+<br><br><b>المحرك المخطط:</b> اتجاه + زخم + حجم/سيولة + دعم/مقاومة + Bid/Ask + نتائج مالية + توزيعات + إفصاحات + فلتر السوق + إدارة مخاطر + سجل أداء للإشارات.
+</div>
+</div>
+<script>
+let stocks=[];
+const demo={
+UCIC:["2.06","شراء",91,"2.01–2.04","2.10 / 2.15","1.98"],
+SPIC:["1.58","شراء",84,"1.54–1.57","1.64 / 1.68","1.51"],
+IDMC:["1.16","انتظار",68,"1.15–1.16","1.20 / 1.23","1.13"],
+JOCM:["1.06","مراقبة",61,"بعد تأكيد","1.10 / 1.14","1.02"],
+SABK:["0.75","انتظار",43,"—","—","—"],
+SALM:["1.38","انتظار",52,"—","—","—"],
+SHRA:["0.45","تجنب",35,"—","—","—"],
+JDFI:["1.16","مضاربة",58,"بعد تأكيد","1.22 / 1.28","1.10"]
+};
+fetch("companies.json").then(r=>r.json()).then(x=>{stocks=x;render()});
+function loadDemo(){Object.entries(demo).forEach(([s,d])=>{let x=stocks.find(a=>a.symbol===s);if(x){x.price=d[0];x.signal=d[1];x.score=d[2];x.entry=d[3];x.target=d[4];x.stop=d[5]}});render();addAlert("تم تحميل بيانات تجريبية — ليست أسعارًا لحظية.");}
+function cls(s){return s==="شراء"?"bgreen":(s==="بيع"||s==="تجنب"?"bred":(s==="انتظار"||s==="مراقبة"?"byellow":"bgray"))}
+function render(){let q=(document.getElementById("search")?.value||"").toUpperCase();let a=stocks.filter(x=>x.symbol.includes(q));document.getElementById("rows").innerHTML=a.map(x=>`<tr><td><b>${x.symbol}</b></td><td>${x.price??"—"}</td><td><span class="badge ${cls(x.signal)}">${x.signal}</span></td><td>${x.score?x.score+"/100":"—"}</td><td>${x.entry}</td><td>${x.target}</td><td>${x.stop}</td></tr>`).join("");let b=stocks.filter(x=>x.signal==="شراء");document.getElementById("buys").textContent=b.length;document.getElementById("best").textContent=b.sort((a,c)=>c.score-a.score)[0]?.symbol||"—";document.getElementById("market").textContent=b.length?"موجب":"محايد";}
+function scan(){addAlert("اكتمل الفحص. في النسخة الحية سيُعاد الحساب بعد وصول أحدث بيانات السوق.");render()}
+function addAlert(t){let d=document.getElementById("alertList");d.innerHTML=`<div class="notice">${new Date().toLocaleTimeString("ar-JO")} — ${t}</div>`+d.innerHTML;document.getElementById("alerts").textContent="";document.getElementById("alerts").previousElementSibling?.remove}
+function addWatch(){let s=document.getElementById("watchInput").value.trim().toUpperCase();if(!s)return;let p=JSON.parse(localStorage.getItem("watch")||"[]");if(!p.includes(s))p.push(s);localStorage.setItem("watch",JSON.stringify(p));renderWatch();document.getElementById("watchInput").value=""}
+function renderWatch(){let p=JSON.parse(localStorage.getItem("watch")||"[]");document.getElementById("watchList").innerHTML=p.length?p.map(s=>`<span class="badge bgray" style="display:inline-block;margin:4px">${s}</span>`).join(""):"لا توجد أسهم مضافة."}
+function calcRisk(){let c=+document.getElementById("capital").value||0,r=+document.getElementById("riskpct").value||1;document.getElementById("riskResult").textContent=`الحد الأقصى للخسارة المقترح = ${(c*r/100).toFixed(2)} دينار. حجم الصفقة الفعلي يعتمد على سعر الدخول ووقف الخسارة.`}
+function showTab(id,el){document.querySelectorAll("section").forEach(x=>x.classList.add("hidden"));document.getElementById(id).classList.remove("hidden");document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));el.classList.add("active");}
+setInterval(()=>document.getElementById("clock").textContent=new Date().toLocaleTimeString("ar-JO"),1000);renderWatch();
+if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
+</script></body></html>
