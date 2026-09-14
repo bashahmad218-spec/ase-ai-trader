@@ -1,0 +1,758 @@
+[
+  {
+    "symbol": "AALU",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "ABUS",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "ACRM",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "AEIV",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "AIPC",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "AMAD",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "AMAL",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "AMWJ",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "ARASO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "ASAS",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "ATCO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "BIND",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "BLAD",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "CEBC",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "CEIG",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "CICO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "COHO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "DADI",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "DARA",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "DMAN",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "DRKMO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "ELZAO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "ENTK",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "FUTR",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "HIPR",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "ICAG",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "IDMC",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "IHCO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "INMA",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "INOHO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "INVHO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "IPCHO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "IPROO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "JDFI",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "JEIH",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "JETT",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "JIIG",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "JITC",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "JNTH",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "JOCM",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "JOHT",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "JOICO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "JOIR",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "JOIT",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "JOMAO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "JOPI",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "JOWM",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "JPTDO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "JRCD",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "JTEL",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "KAFA",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "LEIN",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "MANR",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "MANSO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "MECEO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "MEET",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "MHFZ",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "MSKN",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "NAQL",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "NAST",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "NATA",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "NCCO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "NDAR",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "OFTC",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "PROF",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "REDV",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "RICS",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "RJALO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "RMCC",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "RUMMO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "SABK",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "SALM",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "SANA",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "SHLEO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "SHRA",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "SIBK",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "SPIC",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "THDI",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "THMA",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "UCIC",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "UINVO",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "UMIC",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "UNAI",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  },
+  {
+    "symbol": "VFED",
+    "price": null,
+    "signal": "بيانات مطلوبة",
+    "score": 0,
+    "entry": "—",
+    "target": "—",
+    "stop": "—"
+  }
+]
